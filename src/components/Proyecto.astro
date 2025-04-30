@@ -1,0 +1,54 @@
+---
+import {infoproyecto} from '../data/infoproyecto.js';
+---
+<section>
+
+      {infoproyecto.map((proyecto) => (
+        <div class= "proyectos"> 
+          <strong class="info">{proyecto.nombre}</strong>
+          <br />
+          <a class="descripcion">{proyecto.objetivo}</a>
+          <div>
+            {proyecto.herramientas.map((herramienta) => (
+              <div > 
+                <strong class="info">{herramienta.nombre}</strong>
+                <br />
+                <a class="descripcion">{herramienta.herramienta}</a>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+  </section>
+  
+
+<style>
+    section{
+        justify-content: center;
+        flex-wrap: wrap;
+        display:flex;
+        padding-right: 350px;
+        background-color: #254021;
+
+
+
+    }
+    div{
+        border-radius: 10px;
+        width: 250px;
+        color: aliceblue;
+        align-items: center;
+        margin: 10px;
+        padding: 10px;
+
+    }
+    strong{
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+.proyectos{
+        border: solid aliceblue;
+
+}
+
+</style>

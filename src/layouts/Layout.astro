@@ -1,0 +1,27 @@
+---
+import { ClientRouter } from "astro:transitions";
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Portafolio JIVM</title>
+		<ClientRouter transition:animate="fade" />
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+		background:  linear-gradient(83.21deg, #152612 0%, #254021 25%, #5D735A 75%, #96A694 100%);
+	}
+</style>
