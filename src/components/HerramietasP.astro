@@ -1,0 +1,63 @@
+---
+import Herramienta from "./Herramienta.astro";
+---
+
+<section>
+    <div class="titulo">
+        <div>
+            <h1>Herramientas de Trabajo</h1>
+            <p>
+                Cuento con una formacion academica en diferentes plataformas y
+                herramientas de Desarrollo, en los cuales he desarrollado
+                diferentes proyectos.
+            </p>
+        </div>
+        <div>
+            <img class="peridot"src="src/assets/PeridotG.png">
+        </div>
+    </div>
+
+    <br />
+    <Herramienta />
+</section>
+<style>
+    section {
+        color: #262626;
+
+        margin: 45px;
+        padding: 15px;
+    }
+    h2 {
+        font-size: 25px;
+        border-bottom: solid #262626;
+        margin-bottom: 5px;
+    }
+    h1 {
+        font-size: 35px;
+
+        margin-bottom: 5px;
+        border-bottom: solid #262626;
+    }
+    section p {
+        margin-top: 5px;
+        padding-left: 15px;
+    }
+    .titulo {
+        padding: 15px;
+        background-color: #a6a6a6;
+        display: flex;
+        padding: 15px;
+        padding-top: 5px;
+        border-radius: 10px;
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0); /* Sombra inicial transparente */
+        transition: box-shadow 0.3s ease-in-out;
+        transition: scale 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out; /* Transición suave para la propiedad box-shadow */
+    }
+    .peridot{
+        padding: 15px;
+        margin-left: 50px;
+        width: 50%;
+    }
+</style>

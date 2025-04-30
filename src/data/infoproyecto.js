@@ -41,5 +41,14 @@
                     { nombre: "Base de Datos", herramienta: "SQLite 2.4.0" }
                 ],
                 resultados: "Aplicación móvil funcional con base de datos integrada."
+            },{
+                nombre: "Formulario de Usuarios en Android (CRUD)",
+                objetivo: "Implementar un sistema CRUD para gestionar usuarios en dispositivos móviles.",
+                herramientas: [
+                    { nombre: "IDE", herramienta: "Android Studio 2023.1.13" },
+                    { nombre: "Base de Datos", herramienta: "SQLite 2.4.0" }
+                ],
+                resultados: "Aplicación móvil funcional con base de datos integrada."
             }
+
         ];

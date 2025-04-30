@@ -7,7 +7,7 @@
             Hola, Me presento soy Jose Isaac Velazquez Martinez, Programador en proceso de formacion. Un gusto que estes aqui checando mi portafolio, Espero y les guste. 
             </p>
         </div>
-        <img  class="peridotg"src="src/assets/PeridotG.png" alt="Isaac">
+        <img  class="peridotg elemento-con-sombra"src="src/assets/PeridotG.png" alt="Isaac">
     </div>
 </main>
 <style>
@@ -35,7 +35,7 @@
     .peridotg{
         width: 70%;
         height: 70%;
-        border-radius: 20px;
+        border-radius: 100%;
     }
     .contacto{
         background-color:black;
@@ -48,5 +48,18 @@
     p{
         color: whitesmoke;
     }
+
+    .elemento-con-sombra {
+  /* Estilos base del elemento (puedes adaptarlos a tus necesidades) */
+  border-radius: 100%;
+  transform: scale(1);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0); /* Sombra inicial transparente */
+  transition: box-shadow 0.3s ease-in-out; /* Transición suave para la propiedad box-shadow */
+}
+
+.elemento-con-sombra:hover {
+  transform:scale(1.05);
+  box-shadow: 10px 10px 10px rgb(0, 0, 0); /* Sombra que aparece al hacer hover */
+}
 
 </style>

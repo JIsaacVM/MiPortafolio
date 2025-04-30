@@ -4,15 +4,14 @@ import {infoproyecto} from '../data/infoproyecto.js';
 <section>
 
       {infoproyecto.map((proyecto) => (
-        <div class= "proyectos"> 
+        <div class= "proyectos elemento-con-sombra"> 
           <strong class="info">{proyecto.nombre}</strong>
           <br />
           <a class="descripcion">{proyecto.objetivo}</a>
-          <div>
+          <div class="herramientas">
             {proyecto.herramientas.map((herramienta) => (
-              <div > 
+              <div class="herramienta"> 
                 <strong class="info">{herramienta.nombre}</strong>
-                <br />
                 <a class="descripcion">{herramienta.herramienta}</a>
               </div>
             ))}
@@ -29,6 +28,8 @@ import {infoproyecto} from '../data/infoproyecto.js';
         display:flex;
         padding-right: 350px;
         background-color: #254021;
+        padding-top: 40px;
+        
 
 
 
@@ -48,7 +49,32 @@ import {infoproyecto} from '../data/infoproyecto.js';
     }
 .proyectos{
         border: solid aliceblue;
+        background-color: #5D735A;
 
 }
+.herramientas{
 
+margin: 0%;
+padding: 5%;
+}
+.herramienta{
+
+margin: 0%;
+padding: 5px;
+}
+
+
+.elemento-con-sombra {
+  /* Estilos base del elemento (puedes adaptarlos a tus necesidades) */
+  border-radius: 10px;
+  transform: scale(1);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0); /* Sombra inicial transparente */
+  transition: box-shadow 0.3s ease-in-out;
+  transition: scale 0.3s ease-in-out; /* Transición suave para la propiedad box-shadow */
+}
+
+.elemento-con-sombra:hover {
+  transform:scale(1.05);
+  box-shadow: 10px 10px 10px rgb(0, 0, 0); /* Sombra que aparece al hacer hover */
+}
 </style>
