@@ -8,7 +8,8 @@
                     { nombre: "Base de Datos", herramienta: "MongoDB Atlas v.4.4.6" },
                     { nombre: "Servidor", herramienta: "AWS EC2 v.2.0.1" }
                 ],
-                resultados: "Aplicación Beta"
+                resultados: "Aplicación Beta",
+                link: ""
             },
             {
                 nombre: "API CRUD para Restaurante “El Zarape”",

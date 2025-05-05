@@ -7,12 +7,12 @@ import {infoproyecto} from '../data/infoproyecto.js';
         <div class= "proyectos elemento-con-sombra"> 
           <strong class="info">{proyecto.nombre}</strong>
           <br />
-          <a class="descripcion">{proyecto.objetivo}</a>
+          <p class="descripcion">{proyecto.objetivo}</p>
           <div class="herramientas">
             {proyecto.herramientas.map((herramienta) => (
               <div class="herramienta"> 
                 <strong class="info">{herramienta.nombre}</strong>
-                <a class="descripcion">{herramienta.herramienta}</a>
+                <a href="#" class="descripcion">{herramienta.herramienta}</a>
               </div>
             ))}
           </div>
@@ -70,7 +70,8 @@ padding: 5px;
   transform: scale(1);
   box-shadow: 0 0 0 rgba(0, 0, 0, 0); /* Sombra inicial transparente */
   transition: box-shadow 0.3s ease-in-out;
-  transition: scale 0.3s ease-in-out; /* Transición suave para la propiedad box-shadow */
+  transition: scale 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
 .elemento-con-sombra:hover {

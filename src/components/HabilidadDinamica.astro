@@ -1,0 +1,75 @@
+---
+// Código del servidor (Astro)
+import { SCORE_API } from "astro:env/server";
+import { habilidades } from "../data/habilidades.js";
+
+const res = await fetch(SCORE_API);
+const rawScore = await res.text();
+const scoreValue = rawScore.trim();
+const scorePercentage = `${scoreValue}%`;
+---
+
+<section>
+    <div class="contenedor">
+        {
+            habilidades.map((dato) => (
+                <div class="habilidad">
+                    <h1>{dato.habilidad}</h1>
+
+                    <div class="div-100">
+                        <div
+                            id="divscore"
+                            style={`background-color:#152612; height: 30px; width: ${scorePercentage};`}
+                        />
+                    </div>
+                    <span id="score">{scoreValue}/100</span>
+                </div>
+            ))
+        }
+    </div>
+</section>
+
+<style>
+    section {
+        background-color: #5d735a;
+        margin: 10px;
+        padding: 15px;
+        border-radius: 5px;
+        margin-left: 30px;
+        margin-right: 70px;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    #score {
+        color: white;
+    }
+
+    #divscore {
+        border-radius: 15px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        transition: width 0.3s ease;
+    }
+
+    .div-100 {
+        width: 100%;
+        background-color: #5d735a;
+        border-radius: 15px;
+        overflow: hidden;
+    }
+    .habilidad {
+        width: 25%;
+        background-color: gray;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 20px;
+        padding: 15px;
+        border-radius: 15px;
+    }
+    .contenedor {
+        justify-content: center;
+        flex-wrap: wrap;
+        display: flex;
+    }
+</style>

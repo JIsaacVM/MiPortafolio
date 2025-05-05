@@ -64,7 +64,7 @@ import DescargaCV from "./DescargaCV.astro";
             <DescargaCV />
         </div>
         <div>
-            <a href="/" class="botonregresar">
+            <a  class="return"href="/" class="botonregresar">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -93,7 +93,7 @@ import DescargaCV from "./DescargaCV.astro";
         padding: 20px;
         border-radius: 5px;
         border: 3px solid white;
-        background-image: url("src/assets/thumb-1920-963410.png");
+        background-image: url("/img/thumb-1920-963410.png");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -135,6 +135,8 @@ import DescargaCV from "./DescargaCV.astro";
         padding-left: 50px;
         align-items: center;
         display: flex;
+        height: auto;
+        width: 50%;
     }
     .iconos-a {
         text-decoration: none;
@@ -181,5 +183,20 @@ import DescargaCV from "./DescargaCV.astro";
   stroke: #5D735A;
   color: #5D735A;
   transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out, stroke 0.3s ease-in-out, color 0.3s ease-in-out; /* Añade transiciones para todas las propiedades */
+}
+.return{
+    color: aliceblue;
+    text-decoration:none ;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+
+}
+.return :hover{
+    transform: scale(1.2);
+        transition:
+            transform 0.3s ease,
+            filter 0.3s ease;
+    
+
 }
 </style>

@@ -5,17 +5,16 @@ import { herramientas } from "../data/herraminetas";
 <section>
     {
         herramientas.map((herramienta) => (
-            <div >
+            <div>
                 <h2>{herramienta.titulo}</h2>
                 <div class="contenido">
                     {herramienta.tipos.map((tipo) => (
                         <div class="herramienta herramienta-con-sombra">
-                            <img src={tipo.img} />
+                            <img src={tipo.img} alt={tipo.nombre} />
                             <p>{tipo.herramienta}</p>
                         </div>
                     ))}
                 </div>
-                
             </div>
         ))
     }
@@ -25,11 +24,10 @@ import { herramientas } from "../data/herraminetas";
         font-size: 25px;
         border-bottom: solid #262626;
         margin-bottom: 5px;
-        
     }
-    section{
+    section {
         padding: 30px;
-        background-color: #A6A6A6;
+        background-color: #a6a6a6;
         border-radius: 10px;
     }
     .herramienta {
@@ -49,7 +47,6 @@ import { herramientas } from "../data/herraminetas";
         width: 100%;
         height: auto;
         object-fit: cover;
-
     }
     .div-herr {
     }
@@ -58,25 +55,24 @@ import { herramientas } from "../data/herraminetas";
         align-items: center;
         text-align: center;
         justify-content: center;
-
     }
-    p{
+    p {
         display: block;
         font-size: 12px;
         text-align: center;
     }
-    .herramienta-con-sombra{
-  /* Estilos base del elemento (puedes adaptarlos a tus necesidades) */
-  border-radius: 10px;
-  transform: scale(1);
-  box-shadow: 0 0 0 rgba(0, 0, 0, 0); /* Sombra inicial transparente */
-  transition: box-shadow 0.3s ease-in-out;
-  transition: scale 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out; /* Transición suave para la propiedad box-shadow */
-}
+    .herramienta-con-sombra {
+        /* Estilos base del elemento (puedes adaptarlos a tus necesidades) */
+        border-radius: 10px;
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0); /* Sombra inicial transparente */
+        transition: box-shadow 0.3s ease-in-out;
+        transition: scale 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out; /* Transición suave para la propiedad box-shadow */
+    }
 
-.herramienta-con-sombra:hover {
-  transform:scale(1.05);
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.285); /* Sombra que aparece al hacer hover */
-}
+    .herramienta-con-sombra:hover {
+        transform: scale(1.05);
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.285); /* Sombra que aparece al hacer hover */
+    }
 </style>

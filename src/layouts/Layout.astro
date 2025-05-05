@@ -1,5 +1,7 @@
 ---
 import { ClientRouter } from "astro:transitions";
+import Menu from "../components/Menu.astro";
+import Footer from "../components/Footer.astro";
 ---
 <!doctype html>
 <html lang="en">
@@ -12,7 +14,9 @@ import { ClientRouter } from "astro:transitions";
 		<ClientRouter transition:animate="fade" />
 	</head>
 	<body>
+		<Menu />
 		<slot />
+		<Footer />
 	</body>
 </html>
 
