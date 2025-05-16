@@ -1,7 +1,13 @@
+---
+import { changeLanguage } from "i18next";
+changeLanguage("es");
+import { t } from "i18next";
+---
+
 <main>
     <div class="contenedor">
         <div>
-            <p class="minombre">Mi nombre es Isaac Velzquez</p>
+            <p class="minombre">Yo soy Isaac Velazquez</p>
             <p class="micarrera">
                 Ingeniero en Desarrollo de Software en proceso
             </p>
@@ -14,36 +20,40 @@
         <a href="herramientas">
             <img
                 transition:name="peridot1"
-                class="elemento-con-sombra"
+                class="peridot"
                 src="/img/PeridotG.png"
                 alt="Isaac"
             />
-            </a>
+        </a>
     </div>
 </main>
 <style>
-
+    main {
+        margin: 5%;
+        margin-top: 1%;
+        padding: 5%;
+        width: fit-content;
+        border-radius: 15px;
+    }
     .contenedor {
-        margin-top: 20px;
+        background-color: #2e2e2e;
         margin-left: auto;
         margin-right: auto;
+        padding: 3%;
         display: flex;
         align-items: center;
-        gap: 20px;
-        border-radius: 25px;
-        width: 60%;
+        border-radius: 5px;
     }
 
     .minombre {
         font-size: medium;
-        font-famliy: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
     }
 
     .micarrera {
+        color: #6a5acd;
         font-size: xx-large;
-        font-famliy: Impact, Haettenschwelier, "Arial Narrow Bold", sans-serif;
     }
-    
+
     .contacto {
         background-color: black;
         font-size: large;
@@ -53,19 +63,30 @@
         border-radius: 20px;
     }
     p {
-        color: whitesmoke;
+        color: aliceblue;
+        font-family: "Courier New";
+        margin: 1%;
+        font-weight: bold;
     }
 
-    .elemento-con-sombra {
-        /* Estilos base del elemento (puedes adaptarlos a tus necesidades) */
-        width: 100%;
-        height:    100%;
-        border-radius: 100%;/* Sombra inicial transparente */
+    .peridot {
+        width: 20rem;
+        height: auto;
+        border-radius: 100%;
         transition: all 0.3s ease-in-out;
     }
 
-    .elemento-con-sombra:hover {
+    .peridot:hover {
         transform: scale(1.05);
         box-shadow: 10px 10px 10px rgb(0, 0, 0); /* Sombra que aparece al hacer hover */
+    }
+    @media screen and (max-width: 768px) {
+        .contenedor {
+            display: flow-root;
+            align-items: center;
+        }
+        .peridot {
+            display: none;
+        }
     }
 </style>

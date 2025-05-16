@@ -62,9 +62,10 @@ import DescargaCV from "./DescargaCV.astro";
         </div>
         <div class="div-cv">
             <DescargaCV />
+            <p>Descarga el CV</p>
         </div>
         <div>
-            <a  class="return"href="/" class="botonregresar">
+            <a class="return" href="/" class="botonregresar">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -107,8 +108,8 @@ import DescargaCV from "./DescargaCV.astro";
     }
 
     .regresamos {
-        width: 3%;
-        height: 3%;
+        width: 5%;
+        height: 5%;
     }
     .botonregresar {
         color: aliceblue;
@@ -155,6 +156,9 @@ import DescargaCV from "./DescargaCV.astro";
         height: 40px;
         padding-right: 10px;
     }
+    .div-cv > p {
+        display: none;
+    }
     .div-cv {
         padding-right: 100px;
         display: flex;
@@ -177,26 +181,82 @@ import DescargaCV from "./DescargaCV.astro";
     }
 
     .animacion-iconos:hover a,
-.animacion-iconos:hover svg {
-  transform: scale(1.0005);
-  filter: brightness(1);
-  stroke: #5D735A;
-  color: #5D735A;
-  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out, stroke 0.3s ease-in-out, color 0.3s ease-in-out; /* Añade transiciones para todas las propiedades */
-}
-.return{
-    color: aliceblue;
-    text-decoration:none ;
-    transform: scale(1);
-    transition: transform 0.3s ease-in-out;
-
-}
-.return :hover{
-    transform: scale(1.2);
+    .animacion-iconos:hover svg {
+        transform: scale(1.0005);
+        filter: brightness(1);
+        stroke: #5d735a;
+        color: #5d735a;
+        transition:
+            transform 0.3s ease-in-out,
+            filter 0.3s ease-in-out,
+            stroke 0.3s ease-in-out,
+            color 0.3s ease-in-out; /* Añade transiciones para todas las propiedades */
+    }
+    .return {
+        color: aliceblue;
+        text-decoration: none;
+        transform: scale(1);
+        transition: transform 0.3s ease-in-out;
+    }
+    .return :hover {
+        transform: scale(1.2);
         transition:
             transform 0.3s ease,
             filter 0.3s ease;
-    
-
-}
+    }
+    @media screen and (max-width: 768px) {
+        .info {
+            width: 65%;
+        }
+        h1,
+        h2 {
+            width: 65%;
+        }
+        .div-cv {
+            align-items: center;
+            display: contents;
+        }
+        .div-cv > p {
+            display: inline;
+        }
+        .regresamos {
+            width: 10%;
+            height: 10%;
+        }
+    }
+    @media screen and (max-width: 630px) {
+        .info {
+            width: 90%;
+        }
+        .regresamos {
+            width: 10%;
+        }
+        h1,
+        h2 {
+            width: 90%;
+        }
+        .div-cv {
+            display: block;
+        }
+        .div-cv > p {
+            display: inline;
+        }
+        .regresamos {
+            width: 15%;
+            height: 15%;
+        }
+    }
+    @media screen and (max-width: 425px) {
+        .info {
+            width: 100%;
+        }
+        h1,
+        h2 {
+            width: 100%;
+        }
+        .regresamos {
+            width: 20%;
+            height: 20%;
+        }
+    }
 </style>

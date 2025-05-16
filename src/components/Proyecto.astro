@@ -1,81 +1,132 @@
 ---
-import {infoproyecto} from '../data/infoproyecto.js';
+import { infoproyecto } from "../data/infoproyecto.js";
 ---
-<section>
 
-      {infoproyecto.map((proyecto) => (
-        <div class= "proyectos elemento-con-sombra"> 
-          <strong class="info">{proyecto.nombre}</strong>
-          <br />
-          <p class="descripcion">{proyecto.objetivo}</p>
-          <div class="herramientas">
-            {proyecto.herramientas.map((herramienta) => (
-              <div class="herramienta"> 
-                <strong class="info">{herramienta.nombre}</strong>
-                <a href="#" class="descripcion">{herramienta.herramienta}</a>
+<section>
+  <h2>MIS PROYECTOS</h2>
+  <div class="contenedor">
+    {
+      infoproyecto.map((proyecto) => (
+        <article>
+          <a href={proyecto.page}>
+            <div class="proyectos elemento-con-sombra">
+              <div class="title-img">
+                <strong class="info">{proyecto.nombre}</strong>
+                <img src={proyecto.img} />
+                <br />
               </div>
-            ))}
-          </div>
-        </div>
-      ))}
-  </section>
-  
+              <p class="descripcion">{proyecto.objetivo}</p>
+              <div class="herramientas">
+                {proyecto.herramientas.map((herramienta) => (
+                  <div class="herramienta">
+                    <strong class="info">{herramienta.nombre}</strong>
+                    <a href="#" class="descripcion">
+                      {herramienta.herramienta}
+                    </a>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </a>
+        </article>
+      ))
+    }
+  </div>
+</section>
 
 <style>
-    section{
-        justify-content: center;
-        flex-wrap: wrap;
-        display:flex;
-        padding-right: 350px;
-        background-color: #254021;
-        padding-top: 40px;
-        
+  .contenedor {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los proyectos pasen a la siguiente línea */
+    justify-content: center; /* Centra los grupos de proyectos */
+    padding: 1%;
+    padding-top: 40px;
+  }
+  .title-img {
+    display: flex;
+    padding: 1%;
+    justify-content: space-between;
+    color: #f8f8f2;
+  }
 
+  section {
+    margin: 2%;
+    border-radius: 15px;
+    background-color: #2e2e2e;
+  }
+  img {
+    width: 40%;
+    border-radius: 15px;
+    margin: 5%;
+  }
 
+  a {
+    text-decoration: none;
+    color: #f8f8f2;
+  }
 
-    }
-    div{
-        border-radius: 10px;
-        width: 250px;
-        color: aliceblue;
-        align-items: center;
-        margin: 10px;
-        padding: 10px;
+  h2 {
+    color: aliceblue;
+    font-size: xx-large;
+    padding: 15px;
+    padding-top: 30px;
+    margin-bottom: 0%;
+    align-items: center;
+  }
 
-    }
-    strong{
-        padding: 10px;
-        margin-bottom: 10px;
-    }
-.proyectos{
-        border: solid aliceblue;
-        background-color: #5D735A;
+  article {
+    display: flex; /* Lo mantenemos flex para el futuro si quieres alinear elementos dentro */
+    justify-content: center; /* Centra cada tarjeta individualmente en su espacio */
+    flex-wrap: wrap;
+    margin: 2%; /* Un margen para crear espacio entre las tarjetas */
+    padding-top: 40px;
+    width: 300px; /* Sugiero un ancho fijo para las tarjetas para un diseño más predecible */
+  }
 
-}
-.herramientas{
+  div {
+    border-radius: 10px;
+    width: 100%; /* El div interno ocupa el ancho del article */
+    color: black;
+    align-items: center;
+    padding: 10px;
+  }
 
-margin: 0%;
-padding: 5%;
-}
-.herramienta{
+  strong {
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: larger;
+    align-items: start;
+  }
 
-margin: 0%;
-padding: 5px;
-}
+  .proyectos {
+    background-color: #5b5b5b;
+    margin: 0; /* El espaciado entre tarjetas lo controla el margen del article */
+    color: aliceblue;
+    padding: 3%;
+  }
 
+  .herramientas {
+    margin: 0%;
+    padding: 1%;
+  }
 
-.elemento-con-sombra {
-  /* Estilos base del elemento (puedes adaptarlos a tus necesidades) */
-  border-radius: 10px;
-  transform: scale(1);
-  box-shadow: 0 0 0 rgba(0, 0, 0, 0); /* Sombra inicial transparente */
-  transition: box-shadow 0.3s ease-in-out;
-  transition: scale 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
-}
+  .herramienta {
+    margin: 0%;
+    padding: 5px;
+  }
 
-.elemento-con-sombra:hover {
-  transform:scale(1.05);
-  box-shadow: 10px 10px 10px rgb(0, 0, 0); /* Sombra que aparece al hacer hover */
-}
+  .elemento-con-sombra {
+    border-radius: 10px;
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    transition:
+      box-shadow 0.3s ease-in-out,
+      transform 0.3s ease-in-out;
+    width: 100%; /* Asegura que ocupe el ancho del div padre */
+  }
+
+  .elemento-con-sombra:hover {
+    transform: scale(1.05);
+    box-shadow: 10px 10px 10px rgb(0, 0, 0);
+  }
 </style>

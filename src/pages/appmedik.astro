@@ -1,0 +1,64 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+    <h1>Más Detalles del Proyecto</h1>
+    <section>
+        <div>
+            <p>Detalles Tecnicos del Proyecto</p>
+            <video src="/video/appmedik.mp4" loop muted autoplay> </video>
+        </div>
+        <div>
+            <p>Proyecto en Uso</p>
+            <video src="/video/Video APP.mp4" loop muted autoplay> </video>
+        </div>
+    </section>
+</Layout>
+<style>
+    h1 {
+        color: #f8f8f2;
+        padding-left: 2%;
+        padding: 5px 5px;
+        background-color: gray;
+        margin: 1%;
+        border-radius: 10px;
+    }
+    section {
+        display: flex;
+        align-items: center;
+    }
+    div {
+        margin: 1%;
+        padding: 1%;
+        background-color: gray;
+        border-radius: 15px;
+        width: fit-content;
+        height: fit-content;
+    }
+    video {
+        width: 90%;
+        height: 90%;
+        border-radius: 5%;
+
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    p {
+        font-family: "Helvetica Neue";
+        border-bottom: 3px solid #233a78;
+        color: #233a78;
+        font-weight: bold;
+        font-size: x-large;
+    }
+    @media screen and (max-width: 768px) {
+        section {
+            display: block;
+            margin: 3%;
+        }
+        div {
+            margin: 2%;
+        }
+    }
+</style>
