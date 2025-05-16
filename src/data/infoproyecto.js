@@ -15,7 +15,7 @@ export const infoproyecto = [
     {
         nombre: "API CRUD para Restaurante “El Zarape”",
         objetivo: "Crear servicios RESTful para operaciones CRUD en el sistema de punto de venta del restaurante.",
-        img: "/img/appmedik.png",
+        img: "/img/PeridotG.png",
         herramientas: [
             { nombre: "Base de Datos", herramienta: "MySQL 8.0.38" },
             { nombre: "IDE", herramienta: "Apache NetBeans IDE 24" },
@@ -23,38 +23,42 @@ export const infoproyecto = [
             { nombre: "Cliente API", herramienta: "Postman v.11.31.4" },
             { nombre: "IDE Alternativa", herramienta: "IntelliJIDEA 2024.2.5" }
         ],
-        resultados: "API REST para gestionar datos en una base de datos."
+        resultados: "API REST para gestionar datos en una base de datos.",
+        page: "/detalle-proyecto"
     },
     {
         nombre: "Sistema DAQ para Monitoreo de Sensores",
         objetivo: "Implementar un sistema que interactúe con sensores de temperatura y humedad, almacenando datos en una base de datos mediante una interfaz gráfica.",
-        img: "/img/appmedik.png",
+        img: "/img/PeridotG.png",
         herramientas: [
             { nombre: "Microcontrolador", herramienta: "Arduino Uno" },
             { nombre: "IDE", herramienta: "Arduino IDE 2.3.4" },
             { nombre: "IDE", herramienta: "Apache NetBeans IDE 24" },
             { nombre: "Servicio IoT", herramienta: "Dweet.io" }
         ],
-        resultados: "Monitoreo en tiempo real con recolección de datos."
+        resultados: "Monitoreo en tiempo real con recolección de datos.",
+        page: "/detalle-proyecto"
     },
     {
         nombre: "Formulario de Usuarios en Android (CRUD)",
         objetivo: "Implementar un sistema CRUD para gestionar usuarios en dispositivos móviles.",
-        img: "/img/appmedik.png",
+        img: "/img/PeridotG.png",
         herramientas: [
             { nombre: "IDE", herramienta: "Android Studio 2023.1.13" },
             { nombre: "Base de Datos", herramienta: "SQLite 2.4.0" }
         ],
-        resultados: "Aplicación móvil funcional con base de datos integrada."
+        resultados: "Aplicación móvil funcional con base de datos integrada.",
+        page: "/detalle-proyecto"
     }, {
         nombre: "Formulario de Usuarios en Android (CRUD)",
         objetivo: "Implementar un sistema CRUD para gestionar usuarios en dispositivos móviles.",
-        img: "/img/appmedik.png",
+        img: "/img/PeridotG.png",
         herramientas: [
             { nombre: "IDE", herramienta: "Android Studio 2023.1.13" },
             { nombre: "Base de Datos", herramienta: "SQLite 2.4.0" }
         ],
-        resultados: "Aplicación móvil funcional con base de datos integrada."
+        resultados: "Aplicación móvil funcional con base de datos integrada.",
+        page: "/detalle-proyecto"
     }
 
 ];
