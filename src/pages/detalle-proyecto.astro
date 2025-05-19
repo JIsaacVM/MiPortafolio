@@ -1,12 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { infoproyecto } from "../data/infoproyecto.js";
 ---
 
 <Layout>
     <div class="contenedor">
         <h2>Más Informacion de los proyectos</h2>
         <div class="cont">
-            <div>
+            <div class="div-img">
                 <img src="/img/PeridotG.png" />
             </div>
             <div class="text">
@@ -38,8 +39,10 @@ import Layout from "../layouts/Layout.astro";
             display: block;
         }
         img {
-            width: 80%;
+            width: 100%;
+            height: 100%;
             margin-right: 0;
+            padding-right: 0%;
         }
         div {
             margin: 1.5%;
@@ -61,6 +64,41 @@ import Layout from "../layouts/Layout.astro";
             border-radius: 5px;
             margin-left: 0;
             width: 90%;
+        }
+        .text > p {
+            font-size: 1.5rem;
+        }
+        @media screen and (max-width: 769px) {
+            img {
+                width: 80%;
+                height: 80%;
+            }
+            .cont {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0%;
+            }
+            .div-img {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        @media screen and (max-width: 694px) {
+            .cont {
+                display: block;
+            }
+            img {
+                width: 50%;
+                height: 50%;
+            }
+            .text {
+                justify-content: center;
+                align-items: center;
+                display: grid;
+                margin: auto;
+            }
         }
     </style>
 </Layout>

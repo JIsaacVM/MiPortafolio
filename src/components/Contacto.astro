@@ -136,7 +136,6 @@ import DescargaCV from "./DescargaCV.astro";
         padding-left: 50px;
         align-items: center;
         display: flex;
-        height: auto;
         width: 50%;
     }
     .iconos-a {
@@ -246,7 +245,7 @@ import DescargaCV from "./DescargaCV.astro";
             height: 15%;
         }
     }
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 426px) {
         .info {
             width: 100%;
         }
@@ -257,6 +256,16 @@ import DescargaCV from "./DescargaCV.astro";
         .regresamos {
             width: 20%;
             height: 20%;
+        }
+        .iconos-a {
+            background-color: #5d735a;
+            border-radius: 15px;
+            margin: 1%;
+            height: 30px;
+            justify-content: center;
+        }
+        .iconos-a > svg {
+            display: none;
         }
     }
 </style>

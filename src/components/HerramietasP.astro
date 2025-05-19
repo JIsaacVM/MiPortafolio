@@ -29,8 +29,12 @@ import Herramienta from "./Herramienta.astro";
                 JavaScirpt, SQL ,entre otros.
             </p>
         </div>
-        <div>
-            <img transition:name="peridot1" class="peridot" src="/img/PeridotG.png" />
+        <div class="imagen">
+            <img
+                transition:name="peridot1"
+                class="peridot"
+                src="/img/PeridotG.png"
+            />
         </div>
     </div>
 
@@ -39,8 +43,8 @@ import Herramienta from "./Herramienta.astro";
 </section>
 <style>
     section {
-        margin: 45px;
-        padding: 15px;
+        margin: 1%;
+        padding: 1%;
     }
     h2 {
         font-size: 25px;
@@ -77,5 +81,13 @@ import Herramienta from "./Herramienta.astro";
     }
     .div-t {
         width: 70%;
+    }
+    @media screen and (max-width: 785px) {
+        .div-t {
+            width: 100%;
+        }
+        .imagen {
+            display: none;
+        }
     }
 </style>
