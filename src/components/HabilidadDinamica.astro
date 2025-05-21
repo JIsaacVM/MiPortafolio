@@ -14,15 +14,23 @@ const scorePercentage = `${scoreValue}%`;
         {
             habilidades.map((dato) => (
                 <div class="habilidad">
-                    <h1>{dato.habilidad}</h1>
-
+                    <div class="tittle">
+                        <h1>{dato.habilidad}</h1>
+                        <div class="herramienta">
+                            <img src={dato.img} />
+                        </div>
+                    </div>
                     <div class="div-100">
                         <div
-                            id="divscore"
-                            style={`background-color:#152612; height: 30px; width: ${scorePercentage};`}
+                            class="divscore-animated"
+                            style={`
+                                background-color:#152612;
+                                height: 30px;
+                                --target-width: ${scoreValue}%; /* Definimos la variable CSS aquí */
+                            `}
                         />
                     </div>
-                    <span id="score">{scoreValue}/100</span>
+                    <span class="score-value">{scoreValue}/100</span>
                 </div>
             ))
         }
@@ -30,6 +38,27 @@ const scorePercentage = `${scoreValue}%`;
 </section>
 
 <style>
+    .tittle {
+        display: flex;
+        padding: 2%;
+        align-items: center;
+    }
+    .herramienta {
+        background-color: aliceblue;
+        border-radius: 5px;
+        margin-left: 1rem;
+        width: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .herramienta img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
     section {
         background-color: #444444;
         margin: 10px;
@@ -41,15 +70,26 @@ const scorePercentage = `${scoreValue}%`;
         align-items: center;
     }
 
-    #score {
+    .score-value {
         color: white;
     }
 
-    #divscore {
+    .divscore-animated {
         border-radius: 15px;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
-        transition: width 0.3s ease;
+        width: 0%;
+        height: 30px;
+        animation: fill-bar 1.5s ease-out forwards;
+    }
+
+    @keyframes fill-bar {
+        from {
+            width: 0%; /* Inicia en 0% */
+        }
+        to {
+            width: var(--target-width);
+        }
     }
 
     .div-100 {

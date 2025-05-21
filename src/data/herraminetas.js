@@ -1,15 +1,15 @@
-export const ruta = "../src/img/herramientas/";
+export const ruta = "./img/herramientas/";
 export const herramientas = [
     {
         titulo: "Sistemas Operativos 🖥",
-        tipos:  [
+        tipos: [
             { nombre: "Sistema Operativo", herramienta: "Windows 10 y 11", img: ruta + "windows.png" },
-            { nombre: "Sistema Operativo", herramienta: "Ubuntu 24.04 LTS", img: ruta + "ubuntu.png"}
+            { nombre: "Sistema Operativo", herramienta: "Ubuntu 24.04 LTS", img: ruta + "ubuntu.png" }
         ]
-    },{
+    }, {
         titulo: "Programas 👩‍💻",
         tipos: [
-            { nombre: "Diseño UML", herramienta: "Astah UML v.10.0", img: ruta + "astah.png"},
+            { nombre: "Diseño UML", herramienta: "Astah UML v.10.0", img: ruta + "astah.png" },
             { nombre: "Edición de Imágenes", herramienta: "Adobe Photoshop v.25.3+.1", img: ruta + "adobe_photoshop.png" },
             { nombre: "Simulación de Redes", herramienta: "Cisco Packet Tracer v.8.2.2", img: ruta + "cisco.png" },
             { nombre: "IDE", herramienta: "Apache NetBeans IDE v.24", img: ruta + "netbeans.png" },
@@ -20,7 +20,7 @@ export const herramientas = [
             { nombre: "Base de Datos NoSQL", herramienta: "MongoDB Compass v.8.0.4", img: ruta + "mongodb.png" },
             { nombre: "IDE", herramienta: "Android Studio v2023.1.13", img: ruta + "android_studio.png" }
         ]
-    },{
+    }, {
         titulo: "Lenguajes de Programación 🔠",
         tipos: [
             { nombre: "Lenguaje de Programación", herramienta: "Java Development Kit 17 y 21", img: ruta + "java.png" },

@@ -21,9 +21,7 @@ import { infoproyecto } from "../data/infoproyecto.js";
                 {proyecto.herramientas.map((herramienta) => (
                   <div class="herramienta">
                     <strong class="info">{herramienta.nombre}</strong>
-                    <a href="#" class="descripcion">
-                      {herramienta.herramienta}
-                    </a>
+                    <p class="descripcion">{herramienta.herramienta}</p>
                   </div>
                 ))}
               </div>
@@ -62,6 +60,9 @@ import { infoproyecto } from "../data/infoproyecto.js";
     margin: 5%;
   }
 
+  p {
+    color: #f8f8f2;
+  }
   a {
     text-decoration: none;
     color: #f8f8f2;
@@ -114,7 +115,8 @@ import { infoproyecto } from "../data/infoproyecto.js";
 
   .herramienta {
     margin: 0%;
-    padding: 5px;
+    padding: 0;
+    display: flex;
   }
 
   .elemento-con-sombra {

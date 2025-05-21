@@ -1,0 +1,85 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+    <div class="content">
+        <h1 id="pageTitle">Contenido de la Página</h1>
+        <div id="myButton" class="initial-button-position">
+            Mi Botón Flotante
+        </div>
+    </div>
+</Layout>
+
+<style>
+    body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+        min-height: 200vh; /* Para asegurar suficiente scroll */
+    }
+
+    .content {
+        padding: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .initial-button-position {
+        padding: 15px 30px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.5s ease; /* Transición para suavizar el cambio */
+        z-index: 1000; /* Asegura que el botón esté por encima de otros elementos */
+        margin-top: 20px; /* Separación del título */
+        display: block; /* Para que ocupe su propia línea y el margin-top funcione */
+        margin-left: auto; /* Para centrarlo horizontalmente cuando no es fijo */
+        margin-right: auto;
+    }
+
+    /* Clase para cuando el botón se fija en la esquina */
+    .fixed-corner-button {
+        position: fixed; /* Ahora sí se fija */
+        bottom: 20px;
+        right: 20px;
+        /* Puedes quitar o ajustar left/margin-left/margin-right cuando es fixed */
+        left: unset;
+        margin-left: unset;
+        margin-right: unset;
+    }
+</style>
+
+<script is:inline>
+    document.addEventListener("DOMContentLoaded", function () {
+        const myButton = document.getElementById("myButton");
+        const pageTitle = document.getElementById("pageTitle"); // Referencia al título
+
+        if (!myButton) {
+            console.warn("Botón 'myButton' no encontrado.");
+            return;
+        }
+
+        if (!pageTitle) {
+            console.warn(
+                "Título 'pageTitle' no encontrado. La lógica de scroll no funcionará como se espera.",
+            );
+            return; // Si no hay título, no podemos aplicar la lógica
+        }
+
+        window.addEventListener("scroll", function () {
+            const titleRect = pageTitle.getBoundingClientRect();
+
+            // Si la parte inferior del título está por encima de 0 (es decir, el título ya no es visible)
+            if (titleRect.bottom < 0) {
+                // El título ha salido de la vista, fijar el botón
+                myButton.classList.add("fixed-corner-button");
+            } else {
+                // El título es visible, el botón debe volver a su posición normal
+                myButton.classList.remove("fixed-corner-button");
+            }
+        });
+    });
+</script>

@@ -1,21 +1,26 @@
+export const ruta = "./img/herramientas/";
 export const habilidades = [
     {
-        habilidad: "HTML"
+        habilidad: "HTML",
+        img: ruta + "html.png"
+
     },
     {
-        habilidad: "JAVA"
+        habilidad: "JAVA",
+        img: ruta + "java.png"
+    },
+
+    {
+        habilidad: "MySQL",
+        img: ruta + "mysql.png"
     },
     {
-        habilidad: "XML"
+        habilidad: "JavaFX",
+        img: ruta + "javafx.png"
     },
     {
-        habilidad: "MySQL"
-    },
-    {
-        habilidad: "JavaFX"
-    },
-    {
-        habilidad: "JavaScript"
+        habilidad: "JavaScript",
+        img: ruta + "javascript.png"
     },
 
 ]
