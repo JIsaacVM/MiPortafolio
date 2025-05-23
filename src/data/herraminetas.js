@@ -16,7 +16,7 @@ export const herramientas = [
             { nombre: "Gestión de Bases de Datos", herramienta: "MySQL Workbench v.8.0", img: ruta + "mysql.png" },
             { nombre: "Servidor Web", herramienta: "Apache TomCat v.10.1.13", img: ruta + "tomcat.png" },
             { nombre: "IDE", herramienta: "IntelliJIDEA v.2024.2.5", img: ruta + "intellij.png" },
-            { nombre: "Diseño de Interfaces", herramienta: "SceneBuilder v.24.0.1", img: ruta + "scenebuilder.png" },
+            { nombre: "Diseño de Interfaces", herramienta: "SceneBuilder v.24.0.1", img: ruta + "sceneBuilder.png" },
             { nombre: "Base de Datos NoSQL", herramienta: "MongoDB Compass v.8.0.4", img: ruta + "mongodb.png" },
             { nombre: "IDE", herramienta: "Android Studio v2023.1.13", img: ruta + "android_studio.png" }
         ]
