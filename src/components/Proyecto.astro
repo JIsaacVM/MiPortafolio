@@ -4,13 +4,13 @@ import { infoproyecto } from "../data/infoproyecto.js";
 ---
 
 <section>
-  <h2>MIS PROYECTOS</h2>
+  <h2 class="font-bold">MIS PROYECTOS</h2>
   <div class="contenedor">
     {
       infoproyecto.map((proyecto) => (
-        <article>
+        <article class="">
           <a href={proyecto.page}>
-            <div class="proyectos elemento-con-sombra">
+            <div class="proyectos elemento-con-sombra p-2 pl-5">
               <div class="title-img">
                 <strong class="info">{proyecto.nombre}</strong>
                 <img src={proyecto.img} />
@@ -19,7 +19,7 @@ import { infoproyecto } from "../data/infoproyecto.js";
               <p class="descripcion">{proyecto.objetivo}</p>
               <div class="herramientas">
                 {proyecto.herramientas.map((herramienta) => (
-                  <div class="herramienta">
+                  <div class="herramienta ">
                     <strong class="info">{herramienta.nombre}</strong>
                     <p class="descripcion">{herramienta.herramienta}</p>
                   </div>
@@ -40,7 +40,6 @@ import { infoproyecto } from "../data/infoproyecto.js";
     justify-content: center;
     align-items: flex-start;
     padding: 1%;
-    padding-top: 40px;
   }
   .title-img {
     display: flex;
@@ -52,7 +51,7 @@ import { infoproyecto } from "../data/infoproyecto.js";
   section {
     margin: 2%;
     border-radius: 15px;
-    background-color: #2e2e2e;
+    background-color: #52916a;
   }
   img {
     width: 40%;
@@ -69,43 +68,38 @@ import { infoproyecto } from "../data/infoproyecto.js";
   }
 
   h2 {
-    color: aliceblue;
+    font-family: "Courier New";
+    color: black;
     font-size: xx-large;
     padding: 15px;
     padding-top: 30px;
-    margin-bottom: 0%;
     align-items: center;
   }
 
   article {
-    display: flex; /* Lo mantenemos flex para el futuro si quieres alinear elementos dentro */
-    justify-content: center; /* Centra cada tarjeta individualmente en su espacio */
+    display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    margin: 2%; /* Un margen para crear espacio entre las tarjetas */
-    padding-top: 40px;
-    width: 300px; /* Sugiero un ancho fijo para las tarjetas para un diseño más predecible */
+    margin: 1%;
+    width: 300px;
   }
-
   div {
     border-radius: 10px;
-    width: 100%; /* El div interno ocupa el ancho del article */
+    width: 100%;
     color: black;
     align-items: center;
-    padding: 10px;
   }
 
   strong {
-    padding: 10px;
     margin-bottom: 10px;
     font-size: larger;
     align-items: start;
   }
 
   .proyectos {
-    background-color: #5b5b5b;
+    background-color: #0e3c1f97;
     margin: 0; /* El espaciado entre tarjetas lo controla el margen del article */
     color: aliceblue;
-    padding: 3%;
   }
 
   .herramientas {
@@ -114,8 +108,6 @@ import { infoproyecto } from "../data/infoproyecto.js";
   }
 
   .herramienta {
-    margin: 0%;
-    padding: 0;
     display: flex;
   }
 
