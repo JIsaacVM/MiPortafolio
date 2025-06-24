@@ -1,0 +1,61 @@
+---
+import Herramienta from "../herramientas/Herramienta.astro";
+---
+
+<section>
+    <div class="bg-[#919FA7] bg-cover bg-center h-max relative z-0">
+        <div
+            class="bg-[url('./img/bg/bg-111.png')] min-h-screen w-full h-full bg-cover bg-center relative z-0 animate-fadeIn"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+        >
+            <div class="flex w-full items-center p-10 justify-between">
+                <div
+                    class="w-fit grid justify-items-center"
+                    data-aos="fade-right"
+                    data-aos-duration="2000"
+                >
+                    <p
+                        class="text-6xl h-full flex justify-center font-extrabold text-white"
+                        data-aos="zoom-in"
+                        data-aos-delay="2000"
+                        data-aos-duration="2000"
+                    >
+                        Herramientas
+                    </p>
+
+                    <div
+                        class="bg-[#37393bc7] my-4 flex flex-col w-fit items-center justify-center rounded-4xl"
+                    >
+                        <div class="items-center w-fit py-6">
+                            <img
+                                src="./img/gato.gif"
+                                width="350px"
+                                class="rounded-3xl"
+                            />
+                        </div>
+                        <p
+                            class="font-mono text-justify text-lg m-4 w-[350px] text-white"
+                        >
+                            A lo largo de mi formación, he tenido la oportunidad
+                            de sumergirme en diversas plataformas y dominar un
+                            conjunto de herramientas de desarrollo
+                            vanguardistas. Este conocimiento no se ha quedado en
+                            la teoría; lo he aplicado activamente en la creación
+                            de proyectos tangibles y funcionales.
+                        </p>
+                        <p
+                            class="font-mono text-justify text-xl m-4 w-[350px] text-white"
+                        >
+                            Para el entorno de desarrollo tengo un dominio en
+                            diferentes entornos de programación como lo son
+                            JAVA, HTML, CSS, JavaScirpt, SQL ,entre otros.
+                        </p>
+                    </div>
+                </div>
+
+                <Herramienta />
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,11 +1,12 @@
 ---
 import { changeLanguage } from "i18next";
-import Layout from "../layouts/Layout.astro";
-import HabilidadesP from "../components/HabilidadesP.astro";
+import "../styles/global.css";
+import HabilidadesComponent from "../components/habilidades/HabilidadesComponent.astro";
+import LayoutHabilidades from "../layouts/LayoutHabilidades.astro";
 
 changeLanguage("es");
 ---
-<Layout>
-    
-    <HabilidadesP/>
-</Layout>
+
+<LayoutHabilidades>
+    <HabilidadesComponent />
+</LayoutHabilidades>

@@ -1,7 +1,7 @@
 ---
 // Código del servidor (Astro)
 import { SCORE_API } from "astro:env/server";
-import { habilidades } from "../data/habilidades.js";
+import { habilidades } from "../../data/habilidades.js";
 
 const res = await fetch(SCORE_API);
 const rawScore = await res.text();

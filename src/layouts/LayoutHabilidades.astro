@@ -1,0 +1,48 @@
+---
+import { ClientRouter } from "astro:transitions";
+import MenuHabilidades from "../components/habilidades/MenuHabilidades.astro";
+import FooterHabilidades from "../components/habilidades/FooterHabilidades.astro";
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/faviconJM.webp" />
+        <meta name="generator" content={Astro.generator} />
+        <link
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+            rel="stylesheet"
+        />
+
+        <title>Portafolio JIVM</title>
+        <ClientRouter transition:animate="slide" />
+    </head>
+    <body>
+        <MenuHabilidades />
+        <slot />
+        <FooterHabilidades />
+        <script
+            is:inline
+            src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"
+        ></script>
+
+        <script is:inline src="https://unpkg.com/aos@2.3.1/dist/aos.js"
+        ></script>
+        <script is:inline>
+            AOS.init({
+                disable: "mobile",
+            });
+        </script>
+        <script>
+            import AOS from "aos";
+            import "aos/dist/aos.css";
+
+            AOS.init({
+                once: false,
+                duration: 1200,
+            });
+        </script>
+    </body>
+</html>

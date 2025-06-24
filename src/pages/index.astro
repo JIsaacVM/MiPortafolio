@@ -1,14 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Principal from "../components/Principal.astro";
-import Proyecto from "../components/Proyecto.astro";
 import "../styles/global.css";
-import More from "../components/More.astro";
-import { gems } from "../data/constanst_gems";
+import LineMe from "../components/LineMe.astro";
 ---
 
 <Layout>
+	<LineMe />
+	{
+		/*
 	<More images={gems} isLeftToRight={false} />
 	<Principal />
 	<Proyecto />
+	 */
+	}
 </Layout>
