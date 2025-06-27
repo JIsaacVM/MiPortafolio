@@ -1,15 +1,10 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Principal from "../components/Principal.astro";
-import Proyecto from "../components/Proyecto.astro";
 import "../styles/global.css";
-import More from "../components/More.astro";
-import { gems } from "../data/constanst_gems";
 import ProyectosComponent from "../components/proyectos/ProyectosComponent.astro";
-import LayoutProyectos from "../layouts/LayoutProyectos.astro";
+import LayoutInt from "../layouts/LayoutInt.astro";
 ---
 
-<LayoutProyectos>
+<LayoutInt>
     <ProyectosComponent />
     {
         /*
@@ -18,4 +13,4 @@ import LayoutProyectos from "../layouts/LayoutProyectos.astro";
 	<Proyecto />
 	 */
     }
-</LayoutProyectos>
+</LayoutInt>

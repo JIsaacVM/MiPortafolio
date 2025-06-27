@@ -1,24 +1,30 @@
 ---
-import ContenidoProyectos from "./ContenidoProyectos.astro";
+import { infoproyecto } from "../../data/infoproyecto";
 ---
 
 <section>
-    <div class="bg-[#0B2333] bg-cover bg-center h-screen relative z-0">
+    <div class="bg-[#0B2333] bg-cover bg-center min-h-screen relative z-0">
         <div
-            class="bg-[url('./img/bg/bg-111.png')] w-full h-screen bg-cover bg-center relative z-0 animate-fadeIn"
+            class="bg-[url('./img/bg/bg-111.png')] p-2 sm:p-5 w-full min-h-screen bg-cover bg-center relative z-0 animate-fadeIn"
             data-aos="fade-up"
             data-aos-duration="2000"
         >
-            <div class="w-fit">
+            <div class="px-1 sm:px-2">
                 <div
-                    class="flex px-2 text-white text-5xl font-sans font-extrabold"
+                    class="flex flex-wrap text-white text-2xl sm:text-4xl font-sans font-extrabold"
+                    data-aos="fade-right"
+                    data-aos-duration="2000"
                 >
-                    <p class="px-1.5">MI</p>
-                    <p class="px-1.5">TRAYECTORIA</p>
-                    <p class="px-1.5">DE</p>
-                    <p class="px-1.5">TRABAJO</p>
+                    <p class="px-1">MI</p>
+                    <p class="px-1">TRAYECTORIA</p>
+                    <p class="px-1">DE</p>
+                    <p class="px-1">TRABAJO</p>
                 </div>
-                <div class="text-white w-fit">
+                <div
+                    class="px-1 sm:px-2 text-white text-base sm:text-2xl w-fit"
+                    data-aos="fade-right"
+                    data-aos-duration="2000"
+                >
                     <p>
                         Como referencia a mi trabajo como desarrollador
                         multiplataforma, tengo proyectos en desarrollo web,
@@ -30,7 +36,63 @@ import ContenidoProyectos from "./ContenidoProyectos.astro";
                     </p>
                 </div>
             </div>
-            <ContenidoProyectos />
+            <div class="flex justify-center" data-aos="fade-left">
+                <div
+                    class="w-full mt-8 sm:mt-14 carousel carousel-vertical rounded-box h-[32rem] sm:h-120"
+                >
+                    {
+                        infoproyecto.map((proyecto) => (
+                            <div class="carousel-item h-full w-full p-2 flex flex-col lg:flex-row items-center justify-center">
+                                <div class="w-full lg:w-xl">
+                                    <p class="font-extrabold text-2xl sm:text-4xl">
+                                        {proyecto.nombre}
+                                    </p>
+                                    <p class="font-sans text-lg sm:text-2xl">
+                                        {proyecto.objetivo}
+                                    </p>
+                                    <p class="font-mono text-lg sm:text-2xl font-semibold">
+                                        {proyecto.resultados}
+                                    </p>
+                                    <div class="m-2 sm:m-4 flex flex-wrap">
+                                        <p class="text-base sm:text-xl w-full">
+                                            herramientas:
+                                        </p>
+                                        {proyecto.herramientas &&
+                                            proyecto.herramientas.map(
+                                                (herramienta) => (
+                                                    <p class="badge badge-info mx-1 my-1 text-base sm:text-xl">
+                                                        {
+                                                            herramienta.herramienta
+                                                        }
+                                                    </p>
+                                                ),
+                                            )}
+                                    </div>
+
+                                    {proyecto.page && (
+                                        <div class="w-full justify-center flex ">
+                                            <a
+                                                href={proyecto.page}
+                                                class="text-blue-400 w-fit ml-2 bg-[#ffffff] px-3 sm:px-5 py-1 sm:py-2 rounded-4xl text-base sm:text-lg"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                Ver proyecto
+                                            </a>
+                                        </div>
+                                    )}
+                                </div>
+                                <div class="hidden lg:flex h-52 w-52 sm:h-96 sm:w-96 rounded-4xl flex-shrink-0">
+                                    <img
+                                        class="rounded-4xl p-2 sm:p-5 bg-cover w-full h-full object-cover"
+                                        src={proyecto.img}
+                                    />
+                                </div>
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
         </div>
     </div>
 </section>

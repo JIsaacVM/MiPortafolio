@@ -1,8 +1,10 @@
 ---
 import DescargaCV from "../DescargaCV.astro";
+const { bgColor, textColor, children } = Astro.props;
+import Navbar from "../../components/shared/";
 ---
 
-<header>
+<header class={`w-full p-4 ${bgColor} ${textColor}`}>
     <nav>
         <a href="/">
             <svg
@@ -90,10 +92,6 @@ import DescargaCV from "../DescargaCV.astro";
     svg {
         width: 40px;
         height: 40px;
-    }
-    header {
-        display: flex;
-        background-color: #919fa7;
     }
 
     nav,

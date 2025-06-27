@@ -24,7 +24,7 @@ export const infoproyecto = [
             { nombre: "IDE Alternativa", herramienta: "IntelliJIDEA 2024.2.5" }
         ],
         resultados: "API REST para gestionar datos en una base de datos.",
-        page: "/detalle-proyecto"
+
     },
     {
         nombre: "Sistema DAQ para Monitoreo de Sensores",

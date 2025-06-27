@@ -2,19 +2,25 @@
 import { herramientas } from "../../data/herramientas.js";
 ---
 
-<section>
+<section class="p-4 rounded-xl">
     {
         herramientas.map((herramienta) => (
             <div>
                 <div class="bg-[#37393bc7] my-3 rounded-3xl">
-                    <h2 class=" m-4 pt-4 text-4xl font-bold text-white">
+                    <h2 class="m-4 pt-4 text-2xl md:text-4xl font-bold text-white">
                         {herramienta.titulo}
                     </h2>
-                    <div class="contenido ">
+                    <div class="flex flex-wrap items-center justify-center text-center gap-4 px-2 pb-4">
                         {herramienta.tipos.map((tipo) => (
-                            <div class="herramienta herramienta-con-sombra bg-gray-300">
-                                <img src={tipo.img} alt={tipo.nombre} />
-                                <p>{tipo.herramienta}</p>
+                            <div class="herramienta herramienta-con-sombra bg-gray-300 rounded-lg w-20 h-28 md:w-24 md:h-32 m-2 p-2 flex flex-col justify-center items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+                                <img
+                                    src={tipo.img}
+                                    alt={tipo.nombre}
+                                    class="w-3/4 h-auto object-cover mb-2"
+                                />
+                                <p class="text-xs md:text-sm">
+                                    {tipo.herramienta}
+                                </p>
                             </div>
                         ))}
                     </div>
@@ -23,55 +29,3 @@ import { herramientas } from "../../data/herramientas.js";
         ))
     }
 </section>
-<style>
-    section {
-        padding: 1%;
-        background-color:;
-        border-radius: 10px;
-    }
-    .herramienta {
-        border-radius: 5px;
-        width: 75px;
-        height: 110px;
-        margin: 10px;
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-    .herramienta img {
-        width: 75%;
-        height: auto;
-        object-fit: cover;
-    }
-    .div-herr {
-    }
-    .contenido {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        text-align: center;
-        justify-content: center;
-    }
-    p {
-        display: block;
-        font-size: 12px;
-        text-align: center;
-    }
-    .herramienta-con-sombra {
-        /* Estilos base del elemento (puedes adaptarlos a tus necesidades) */
-        border-radius: 10px;
-        transform: scale(1);
-        box-shadow: 0 0 0 rgba(0, 0, 0, 0); /* Sombra inicial transparente */
-        transition: box-shadow 0.3s ease-in-out;
-        transition: scale 0.3s ease-in-out;
-        transition: transform 0.3s ease-in-out; /* Transición suave para la propiedad box-shadow */
-    }
-
-    .herramienta-con-sombra:hover {
-        transform: scale(1.05);
-        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.285); /* Sombra que aparece al hacer hover */
-    }
-</style>

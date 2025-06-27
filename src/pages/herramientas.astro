@@ -3,9 +3,13 @@ import { changeLanguage } from "i18next";
 import "../styles/global.css";
 
 import HerramientasComponent from "../components/herramientas/HerramientasComponent.astro";
-import LayoutHerramientas from "../layouts/LayoutHerramientas.astro";
+import LayoutInt from "../layouts/LayoutInt.astro";
 
 changeLanguage("es");
+
+const bgColor = "bg-[#00501D]";
 ---
 
-<LayoutHerramientas><HerramientasComponent /> </LayoutHerramientas>
+<LayoutInt bgColor={bgColor}>
+    <HerramientasComponent />
+</LayoutInt>
