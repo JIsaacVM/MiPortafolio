@@ -1,0 +1,11 @@
+---
+import "../styles/global.css";
+import HabilidadesComponent from "../components/habilidades/HabilidadesComponent.astro";
+import LayoutInt from "../layouts/LayoutInt.astro";
+const mainBgColor = "bg-[#2C4352]"; // Color de fondo para toda la página de Herramientas
+const menuBgColor = "bg-[#2C4352]";
+---
+
+<LayoutInt bgColor={mainBgColor} menuBgColor={menuBgColor}>
+    <HabilidadesComponent />
+</LayoutInt>

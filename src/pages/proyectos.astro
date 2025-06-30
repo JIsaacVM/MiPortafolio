@@ -2,15 +2,11 @@
 import "../styles/global.css";
 import ProyectosComponent from "../components/proyectos/ProyectosComponent.astro";
 import LayoutInt from "../layouts/LayoutInt.astro";
+// Define los colores específicos para esta página
+const mainBgColor = "bg-[#0B2333]"; // Color de fondo para toda la página de Herramientas
+const menuBgColor = "bg-[#0B2333]"; // Puedes poner el color que quieras para el menú de esta página
 ---
 
-<LayoutInt>
+<LayoutInt bgColor={mainBgColor} menuBgColor={menuBgColor}>
     <ProyectosComponent />
-    {
-        /*
-	<More images={gems} isLeftToRight={false} />
-	<Principal />
-	<Proyecto />
-	 */
-    }
 </LayoutInt>

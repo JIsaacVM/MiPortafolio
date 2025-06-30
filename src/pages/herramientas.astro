@@ -1,15 +1,13 @@
 ---
-import { changeLanguage } from "i18next";
-import "../styles/global.css";
-
 import HerramientasComponent from "../components/herramientas/HerramientasComponent.astro";
 import LayoutInt from "../layouts/LayoutInt.astro";
+import "../styles/global.css"; // Esta ya la puedes importar en el LayoutInt si no la usas globalmente en todas las páginas.
 
-changeLanguage("es");
-
-const bgColor = "bg-[#00501D]";
+// Define los colores específicos para esta página
+const mainBgColor = "bg-[#919FA7]"; // Color de fondo para toda la página de Herramientas
+const menuBgColor = "bg-[#919FA7]"; // Puedes poner el color que quieras para el menú de esta página
 ---
 
-<LayoutInt bgColor={bgColor}>
+<LayoutInt bgColor={mainBgColor} menuBgColor={menuBgColor}>
     <HerramientasComponent />
 </LayoutInt>

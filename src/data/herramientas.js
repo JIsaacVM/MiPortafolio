@@ -21,7 +21,7 @@ export const herramientas = [
             { nombre: "IDE", herramienta: "Android Studio", img: ruta + "android_studio.png" }
         ]
     }, {
-        titulo: "Lenguajes de Programación",
+        titulo: "Entornos de Programación",
         tipos: [
             { nombre: "Lenguaje de Programación", herramienta: "Java Development Kit", img: ruta + "java.png" },
             { nombre: "Lenguaje de Programación", herramienta: "Python", img: ruta + "python.png" },

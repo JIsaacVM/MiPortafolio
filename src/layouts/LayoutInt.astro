@@ -2,11 +2,21 @@
 import { ClientRouter } from "astro:transitions";
 import MenuShared from "../components/shared/MenuShared.astro";
 import FooterShared from "../components/shared/FooterShared.astro";
-const { bgColor } = Astro.props;
+
+interface Props {
+    bgColor?: string; // Definimos el prop bgColor, que será una clase de Tailwind
+    menuBgColor?: string; // Agregamos un prop para el color del menú
+}
+
+// Desestructuramos los props y damos valores por defecto si no se pasan
+const {
+    bgColor = "bg-gray-100", // Color de fondo por defecto para el body/layout
+    menuBgColor = "bg-gray-800", // Color de fondo por defecto para el menú
+} = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
@@ -20,10 +30,12 @@ const { bgColor } = Astro.props;
         <title>Portafolio JIVM</title>
         <ClientRouter transition:animate="slide" />
     </head>
-    <body>
-        <MenuShared />
-        <slot />
-        <FooterShared />
+    <body class={`${bgColor} min-h-screen flex flex-col`}>
+        <MenuShared bgColor={menuBgColor} />
+        <main class="flex-grow">
+            <slot />
+        </main>
+        <FooterShared bgColor={menuBgColor} />
         <script
             is:inline
             src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"

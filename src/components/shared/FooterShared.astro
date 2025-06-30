@@ -1,4 +1,14 @@
-<footer class="pb-2">
+---
+interface Props {
+    bgColor?: string;
+    textColor?: string;
+}
+
+// Desestructuramos los props y damos valores por defecto
+const { bgColor = "bg-gray-400" } = Astro.props;
+---
+
+<footer class={`pb-2 p-1 text-center  ${bgColor} `}>
     <div class="footer-inner pb-2">
         <div class="footer-links pb-2">
             <div>
@@ -43,11 +53,6 @@
 </footer>
 
 <style>
-    footer {
-        background-color: #0b2333;
-        padding: 5px;
-        text-align: center;
-    }
     p {
         color: aliceblue;
         text-align: center;

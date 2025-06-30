@@ -1,11 +1,89 @@
-<section>
-    <div class="bg-[#2C4352] bg-cover bg-center h-screen relative z-0">
+---
+import { timelineData } from "../../data/aboutme";
+---
+
+<section class="h-full">
+    <div
+        class="flex justify-center w-full bg-cover bg-center relative z-0 animate-fadeIn"
+        data-aos="fade-up"
+        data-aos-duration="2000"
+    >
         <div
-            class="bg-[url('./img/bg/bg-111.png')] w-full h-screen bg-cover bg-center relative z-0 animate-fadeIn"
-            data-aos="fade-up"
-            data-aos-duration="2000"
+            class="flex flex-col items-center justify-start text-justify p-4 sm:p-8"
         >
-            <div class="flex"></div>
+            <p class="text-6xl font-extrabold uppercase">Mi trayectoria</p>
+            <p class="text-2xl mt-4">
+                Durante todo este tiempo me he estado preparando haciendo
+                diferentes certificaciones, titulaciones y acredintando cursos
+                relavantes a mi perfil de profesional.
+            </p>
+            <p class="text-2xl mt-4">
+                Adjunto algunos de los cursos y certificaciones que he realizado
+                durante mi formación academica hasta el momento actual
+            </p>
+        </div>
+        <div class="flex">
+            <ul
+                class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical"
+            >
+                {
+                    timelineData.map((item, idx) => (
+                        <li>
+                            {idx !== 0 && <hr />}
+                            <div class="timeline-middle">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20"
+                                    fill="currentColor"
+                                    class="h-5 w-5"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+                            </div>
+                            <div
+                                class={`${
+                                    idx % 2 === 0
+                                        ? "timeline-start mb-10 md:text-end"
+                                        : "timeline-end md:mb-10"
+                                } bg-[#738591cb] rounded-3xl px-6 py-3`}
+                            >
+                                <time class="font-mono italic">
+                                    {item.year}
+                                </time>
+                                <div class="text-lg font-black">
+                                    {item.title}
+                                </div>
+                                {item.img && item.imgLeft !== null ? (
+                                    <div class="flex">
+                                        {item.imgLeft && (
+                                            <img
+                                                src={item.img}
+                                                alt=""
+                                                class="w-64 h-64 rounded-2xl"
+                                            />
+                                        )}
+                                        <p>{item.description}</p>
+                                        {!item.imgLeft && (
+                                            <img
+                                                src={item.img}
+                                                alt=""
+                                                class="w-64 h-64 rounded-2xl"
+                                            />
+                                        )}
+                                    </div>
+                                ) : (
+                                    <div set:html={item.description} />
+                                )}
+                            </div>
+                            {idx !== timelineData.length - 1 && <hr />}
+                        </li>
+                    ))
+                }
+            </ul>
         </div>
     </div>
 </section>
