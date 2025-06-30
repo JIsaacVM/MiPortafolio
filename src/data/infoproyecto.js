@@ -27,7 +27,7 @@ export const infoproyecto = [
     {
         nombre: "API CRUD para Restaurante “El Zarape”",
         objetivo: "Crear servicios RESTful para operaciones CRUD en el sistema de punto de venta del restaurante.",
-        img: "/img/PeridotG.png",
+        img: "/img/El-Zarape.png",
         herramientas: [
             { herramienta: "MySQL 8.0.38" },
             { herramienta: "Apache NetBeans IDE 24" },
@@ -41,7 +41,7 @@ export const infoproyecto = [
     {
         nombre: "Sistema DAQ para Monitoreo de Sensores",
         objetivo: "Implementar un sistema que interactúe con sensores de temperatura y humedad, almacenando datos en una base de datos mediante una interfaz gráfica.",
-        img: "/img/PeridotG.png",
+        img: "/img/DAQ.png",
         herramientas: [
             { herramienta: "Arduino Uno" },
             { herramienta: "Arduino IDE 2.3.4" },
@@ -54,7 +54,7 @@ export const infoproyecto = [
     {
         nombre: "Formulario de Usuarios en Android (CRUD)",
         objetivo: "Implementar un sistema CRUD para gestionar usuarios en dispositivos móviles.",
-        img: "/img/PeridotG.png",
+        img: "/img/CRUD.png",
         herramientas: [
             { nombre: "IDE", herramienta: "Android Studio 2023.1.13" },
             { nombre: "Base de Datos", herramienta: "SQLite 2.4.0" }
@@ -64,7 +64,7 @@ export const infoproyecto = [
     }, {
         nombre: "Formulario de Usuarios en Android (CRUD)",
         objetivo: "Implementar un sistema CRUD para gestionar usuarios en dispositivos móviles.",
-        img: "/img/PeridotG.png",
+        img: "/img/CRUD-movil.png",
         herramientas: [
             { nombre: "IDE", herramienta: "Android Studio 2023.1.13" },
             { nombre: "Base de Datos", herramienta: "SQLite 2.4.0" }
