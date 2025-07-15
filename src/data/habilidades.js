@@ -1,4 +1,4 @@
-export const ruta = "./img/herramientas/";
+export const ruta = "/img/herramientas/";
 export const habilidades = [
     {
         habilidad: "HTML",
