@@ -9,7 +9,9 @@ export const infoproyecto = [
             { herramienta: "Tailwind CSS" },
         ],
         resultados: "Pagina web actualizada ",
-        page: "https://www.piac.org.mx"
+        page: "https://www.piac.org.mx",
+        target: "_target"
+
     },
     {
         nombre: "AppMedik",
@@ -22,7 +24,8 @@ export const infoproyecto = [
             { herramienta: "AWS EC2 v.2.0.1" }
         ],
         resultados: "Aplicación Beta",
-        page: "appmedik"
+        page: "/appmedik",
+        target: "_self"
     },
     {
         nombre: "API CRUD para Restaurante “El Zarape”",
@@ -49,7 +52,9 @@ export const infoproyecto = [
             { herramienta: "Dweet.io" }
         ],
         resultados: "Monitoreo en tiempo real con recolección de datos.",
-        page: "/detalle-proyecto"
+        page: "/detalle-proyecto",
+        target: "_self"
+
     },
     {
         nombre: "Formulario de Usuarios en Android (CRUD)",
@@ -60,7 +65,9 @@ export const infoproyecto = [
             { nombre: "Base de Datos", herramienta: "SQLite 2.4.0" }
         ],
         resultados: "Aplicación móvil funcional con base de datos integrada.",
-        page: "/detalle-proyecto"
+        page: "/detalle-proyecto",
+        target: "_self"
+
     }, {
         nombre: "Formulario de Usuarios en Android (CRUD)",
         objetivo: "Implementar un sistema CRUD para gestionar usuarios en dispositivos móviles.",
@@ -70,7 +77,9 @@ export const infoproyecto = [
             { nombre: "Base de Datos", herramienta: "SQLite 2.4.0" }
         ],
         resultados: "Aplicación móvil funcional con base de datos integrada.",
-        page: "/detalle-proyecto"
+        page: "/detalle-proyecto",
+        target: "_self"
+
     }
 
 ];
