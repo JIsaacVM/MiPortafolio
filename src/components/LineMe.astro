@@ -3,17 +3,17 @@ import MyModal from "./shared/MyModal.astro";
 ---
 
 <section>
-    <div class="bg-[#9EBDD0] bg-cover bg-center h-screen relative z-0">
+    <div class="bg-[#9EBDD0] bg-cover bg-center h-full w-full relative z-0">
         <div
-            class="bg-[url('/img/bg/bg-111.png')] w-full bg-cover bg-center relative z-0"
+            class="bg-[url('/img/bg/bg-111.png')] w-full h-full bg-cover bg-center relative z-0"
             data-aos="fade-up"
         >
             <div class="flex">
-                <div class="lg:flex p-10 grid items-start space-x-8">
+                <div class="lg:flex sm:p-10 p-5 grid items-start space-x-8">
                     <img
                         src="/img/me3.png"
                         alt="RE+ Península Yucatan logo"
-                        class="w-sm rounded-4xl"
+                        class="sm:w-sm w-50 rounded-4xl"
                         data-aos="fade-right"
                         data-aos-delay="300"
                         data-aos-duration="1200"
@@ -21,7 +21,7 @@ import MyModal from "./shared/MyModal.astro";
                     <div class="grid h-fit">
                         <div class="grid text-gray-800">
                             <p
-                                class="font-extrabold text-6xl"
+                                class="font-extrabold sm:text-6xl text-5xl"
                                 data-aos="fade-left"
                                 data-aos-duration="1200"
                             >
@@ -46,27 +46,29 @@ import MyModal from "./shared/MyModal.astro";
                             </p>
                         </div>
                         <div
-                            class="flex items-center space-x-4 mt-8 z-auto"
+                            class="flex flex-col m-5 md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0 mt-8 z-auto px-4"
                             data-aos-duration="1200"
                             data-aos="fade-up"
                         >
                             <a
                                 href="/herramientas"
-                                class="bg-[#9EBDD0] hover:bg-[#FCEEE1] text-white hover:text-[#9EBDD0] px-4 py-2 rounded-2xl z-10"
+                                class="bg-[#9EBDD0] hover:bg-[#FCEEE1] text-white hover:text-[#9EBDD0] px-4 py-2 rounded-2xl z-10 w-full text-center md:w-auto"
                                 >Mi Kit de Herramientas</a
                             >
-                            <div class="flex-1 h-1 bg-gray-400"></div>
+                            <div class="hidden md:block flex-1 h-1 bg-gray-400">
+                            </div>
                             <a
                                 href="/proyectos"
-                                class="bg-[#9EBDD0] hover:bg-[#FCEEE1] text-white hover:text-[#9EBDD0] px-4 py-2 rounded-2xl z-10"
+                                class="bg-[#9EBDD0] hover:bg-[#FCEEE1] text-white hover:text-[#9EBDD0] px-4 py-2 rounded-2xl z-10 w-full text-center md:w-auto"
                                 >Mi Trabajo</a
                             >
-                            <div class="flex-1 h-1 bg-gray-400"></div>
+                            <div class="hidden md:block flex-1 h-1 bg-gray-400">
+                            </div>
                             <a
                                 href="/about-me"
-                                class="bg-[#9EBDD0] hover:bg-[#FCEEE1] text-white hover:text-[#9EBDD0] px-4 py-2 rounded-2xl z-10"
-                                >Mis Fortalezas
-                            </a>
+                                class="bg-[#9EBDD0] hover:bg-[#FCEEE1] text-white hover:text-[#9EBDD0] px-4 py-2 rounded-2xl z-10 w-full text-center md:w-auto"
+                                >Mis Fortalezas</a
+                            >
                         </div>
                     </div>
                 </div>

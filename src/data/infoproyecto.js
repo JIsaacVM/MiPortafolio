@@ -24,7 +24,7 @@ export const infoproyecto = [
             { herramienta: "AWS EC2 v.2.0.1" }
         ],
         resultados: "Aplicación Beta",
-        page: "/appmedik",
+        page: "/../appmedik",
         target: "_self"
     },
     {
