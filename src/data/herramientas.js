@@ -18,7 +18,12 @@ export const herramientas = [
             { nombre: "IDE", herramienta: "IntelliJIDEA", img: ruta + "intellij.png" },
             { nombre: "Diseño de Interfaces", herramienta: "SceneBuilder", img: ruta + "sceneBuilder.png" },
             { nombre: "Base de Datos NoSQL", herramienta: "MongoDB Compass", img: ruta + "mongodb.png" },
-            { nombre: "IDE", herramienta: "Android Studio", img: ruta + "android_studio.png" }
+            { nombre: "IDE", herramienta: "Android Studio", img: ruta + "android_studio.png" },
+            { nombre: "IDE", herramienta: "Visual Studio Code", img: ruta + "VisualCode.png" },
+            { nombre: "Framework", herramienta: "Astro Build", img: ruta + "astroBuild.png" },
+            { nombre: "Framework", herramienta: "Tailwind CSS", img: ruta + "tailwind_css.png" },
+            { nombre: "Framework", herramienta: "React", img: ruta + "react.png" },
+            { nombre: "Framework", herramienta: "Node.js", img: ruta + "node-js.png" },
         ]
     }, {
         titulo: "Entornos de Programación",

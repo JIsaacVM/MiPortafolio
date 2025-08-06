@@ -4,26 +4,30 @@ import { timelineData } from "../../data/aboutme";
 
 <section class="h-full">
     <div
-        class="lg:flex grid justify-center w-full bg-cover bg-center relative z-0 animate-fadeIn"
+        class="xl:flex grid justify-center w-full bg-cover bg-center relative z-0 animate-fadeIn"
         data-aos="fade-up"
         data-aos-duration="2000"
     >
         <div
             class="bg-[#738591cb] rounded-3xl flex flex-col items-center justify-start text-justify p-2 m-2 sm:p-8"
         >
-            <p class="text-6xl font-extrabold uppercase font-serif">
+            <p class="lg:text-6xl text-4xl font-extrabold uppercase font-serif">
                 Mi trayectoria
             </p>
-            <p class="text-2xl mt-4">
+            <p class="lg:text-2xl text-xl mt-4">
                 Durante todo este tiempo me he estado preparando haciendo
                 diferentes certificaciones, titulaciones y acredintando cursos
                 relavantes a mi perfil de profesional.
             </p>
-            <p class="text-2xl mt-4">
+            <p class="lg:text-2xl text-xl mt-4">
                 Adjunto algunos de los cursos y certificaciones que he realizado
                 durante mi formación academica hasta el momento actual
             </p>
-            <img src="../img/trayectoria.png" alt="" class="rounded-4xl" />
+            <img
+                src="../img/trayectoria.png"
+                alt=""
+                class="lg:size-full size-72 rounded-4xl"
+            />
         </div>
         <div class="flex">
             <ul
@@ -66,7 +70,7 @@ import { timelineData } from "../../data/aboutme";
                                             <img
                                                 src={item.img}
                                                 alt=""
-                                                class="w-64 h-64 rounded-2xl"
+                                                class="md:block hidden w-64 h-64 rounded-2xl"
                                             />
                                         )}
                                         <p>{item.description}</p>
@@ -74,7 +78,7 @@ import { timelineData } from "../../data/aboutme";
                                             <img
                                                 src={item.img}
                                                 alt=""
-                                                class="w-64 h-64 rounded-2xl"
+                                                class="md:block hidden w-64 h-64 rounded-2xl"
                                             />
                                         )}
                                     </div>
