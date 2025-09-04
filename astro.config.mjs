@@ -13,7 +13,7 @@ export default defineConfig({
 
   env: {
     schema: {
-      SCORE_API: envField.string({ context: 'server', access: 'public' })
+
     }
   },
   vite: {
